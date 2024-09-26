@@ -1,0 +1,26 @@
+<div class="mt-16 px-2">
+  <h2 class="h2 mb-4 text-white">Get in touch.</h2>
+  <p class="text-white/50">
+    Reach out to me on
+    <a href="https://x.com/RousDev" class="hover:underline offset-1">X</a>,
+    explore my open-source projects on <a
+      href="https://github.com/JhojanGgarcia"
+      class="hover:underline">Github</a
+    >
+    profile, or send me an email directly at<span class="ml-1"
+      ><span
+        class="relative cursor-pointer hover:underline"
+        data-state="closed"
+        onclick="
+          const email = 'jhojanggarcial@gmail.com';
+          navigator.clipboard.writeText(email);
+          const el = event.target;
+          const orig = el.textContent;
+          el.textContent = 'Copied!';
+          setTimeout(() => (el.textContent = orig), 1000);
+        "
+        >jhojanggarcial@gmail.com</span
+      ></span
+    >.
+  </p>
+</div>

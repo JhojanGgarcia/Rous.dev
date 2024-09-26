@@ -1,0 +1,30 @@
+---
+import { AnimatedNumberBasic } from "../ui/AnimatedNumberBasic";
+---
+
+<div
+  class="max-w-4xl py-20 px-2 gap-4 flex flex-col md:flex-row items-start overflow-x-hidden"
+>
+  <div class="w-full md:w-2/3 flex flex-col">
+    <p class="text-white py-4">About me.</p>
+    <div class="text-white/50 flex flex-wrap">
+      I'm Jhojan, a&nbsp;<strong class="text-white">Frontend Developer</strong
+      >&nbsp;from Colombia with&nbsp;
+      <AnimatedNumberBasic client:visible />&nbsp;years of experience.
+    </div>
+    <div class="text-white/50 max-w-xl mt-4">
+      Crafting UIs with React since 2023. Passionate about creating libraries
+      and useful interactive websites, striving to create great experiences with
+      a minimalist approach.
+    </div>
+  </div>
+  <div class="w-[100px] md:w-1/3 mx-auto mb-4 md:mb-0">
+    <img
+      src="/me.jpg"
+      alt="Profile picture"
+      class="rounded-3xl shadow-lg w-full"
+      loading="lazy"
+      style={{ filter: "grayscale(100%)" }}
+    />
+  </div>
+</div>

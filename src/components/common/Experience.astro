@@ -1,0 +1,54 @@
+---
+import { ExperienceAndStudies } from "../../lib/Steps";
+import ExperienceStep from "./content/ExperienceStep.astro";
+---
+
+<div class="w-full max-w-2xl px-2 py-24">
+  <p class="text-white mb-14">Experience.</p>
+  {
+    ExperienceAndStudies.map((experience, index) => (
+      <ExperienceStep
+        key={experience.title}
+        step={experience.title}
+        title={experience.university}
+      >
+        <div class="h-fit w-full flex  gap-1 flex-col rounded-lg border border-neutral-400/20  overflow-hidden px-5 py-3 transition-colors duration-300 bg-[radial-gradient(circle_at_top,rgba(100,100,100,0.1)_0%,transparent_60%)] relative">
+          <div class=" text-white/50 grid">{experience.desc}</div>
+          <p class="text-white/20 text-sm flex gap-2 ">
+            <>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                color="#fff"
+                opacity="0.5"
+                fill="none"
+              >
+                <path
+                  d="M13.6177 21.367C13.1841 21.773 12.6044 22 12.0011 22C11.3978 22 10.8182 21.773 10.3845 21.367C6.41302 17.626 1.09076 13.4469 3.68627 7.37966C5.08963 4.09916 8.45834 2 12.0011 2C15.5439 2 18.9126 4.09916 20.316 7.37966C22.9082 13.4393 17.599 17.6389 13.6177 21.367Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M15.5 11C15.5 12.933 13.933 14.5 12 14.5C10.067 14.5 8.5 12.933 8.5 11C8.5 9.067 10.067 7.5 12 7.5C13.933 7.5 15.5 9.067 15.5 11Z"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+              <a
+                class="hover:underline"
+                href="https://www.google.com/maps/place/Uniminuto/@6.311018,-75.5570792,17z/data=!3m1!4b1!4m6!3m5!1s0x8e442f3e26397079:0x5a5f7af9067a2dd9!8m2!3d6.3110127!4d-75.5545043!16s%2Fg%2F1tddt7fn?entry=ttu&g_ep=EgoyMDI0MDkyMy4wIKXMDSoASAFQAw%3D%3D"
+              >
+                {experience.location}
+              </a>
+            </>
+          </p>
+          <p class="text-white/20 text-sm flex items-center justify-between gap-2">
+            {experience.year}
+          </p>
+        </div>
+      </ExperienceStep>
+    ))
+  }
+</div>
