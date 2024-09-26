@@ -18,6 +18,7 @@ export const Dock = () => {
               <AppIcon imgSrc={"javascript.svg"} withoutBackground={true} />
               <AppIcon imgSrc={"figma.svg"} withoutBackground={true} />
               <AppIcon imgSrc={"git.svg"} withoutBackground={true} />
+              <AppIcon imgSrc={"vercel.svg"} withoutBackground={true} />
             </div>
           </div>
         </div>
@@ -28,9 +29,9 @@ export const Dock = () => {
 
 function AppIcon({ imgSrc, withoutBackground }) {
   return (
-    <div class=" group z-20 grid w-fit  cursor-pointer place-items-center py-2 px-4 pl-0">
+    <div class=" group z-20 grid w-fit place-items-center py-2 px-4 pl-0">
       <div
-        class={`pointer-events-none z-20  relative  inline size-14 transform-gpu  rounded-2xl  shadow-inner transition-all duration-200 group-hover:size-[4rem] group-hover:shadow-sm bg-gray-800",
+        class={`pointer-events-none z-20  relative  inline size-14 transform-gpu  rounded-2xl  shadow-inner transition-all duration-200 ",
           ${withoutBackground ? "p-2" : ""}`}
       >
         <image
